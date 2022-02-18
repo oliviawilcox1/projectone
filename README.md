@@ -11,7 +11,7 @@
 
 ###### Steps
 
-1. This game will have squares that are blank. When you click on them, they will flip over and reveal either a shape or an image. 
+1. This game will have squares that are blank. It will be a 4x4 grid. When you click on each box, they will flip over and reveal either a shape or an image. 
 
 2. As well, when you click on a square the timer will begin counting down from 30 seconds. 
 
