@@ -1,13 +1,15 @@
 # projectone
 
-## Matching Fun!
+## Matching Fun! 
 
 
 ### Click on the tiles to reveal a shape. If they are a match, they will disappear. You have 30 seconds to clear the board! Player one goes first
 
 #### Time: 30 seconds.
 
-##### Steps
+##### The premise of this game is to help you with your memory!
+
+###### Steps
 
 1. This game will have squares that are blank. When you click on them, they will flip over and reveal either a shape or an image. 
 
@@ -35,4 +37,7 @@
 
 
 
+Technologies - HTML, CSSM, DOM Manipulation, JavaScript
 
+
+Long term stretch goal - leveling up and adding the grid as time goes on
