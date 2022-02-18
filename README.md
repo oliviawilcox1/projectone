@@ -29,7 +29,9 @@
 
 
 
-![img](Screen Shot 2022-02-18 at 10.18.19 AM.png)
+![start](img/stepOne.png)
+![start](img/step2.png)
+![start](img/step.png)
 
 
 
