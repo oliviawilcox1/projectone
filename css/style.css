@@ -1,0 +1,60 @@
+body {
+    background-color: rgba(152, 132, 172, 0.413)
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 35px;
+    color: rgba(126, 81, 167, 0.516);
+}
+
+h2 {
+    text-align: center;
+    font-weight: 500;
+    margin: 5px;
+    color: rgba(126, 81, 167, 0.516);
+}
+
+h3 {
+    font-size: 25px;
+    text-decoration: underline;
+    font-weight: 500;
+    padding-top: 15px;
+    color: rgba(126, 81, 167, 0.516);
+}
+
+
+
+#holder {
+    border-radius: 75px;
+    padding-bottom: 2px;
+    background-color: rgba(255, 255, 255, 0.331);
+    margin: auto;
+    text-align: center;
+    width: 425px;
+    height: auto;
+}
+#h4 { 
+    font-weight: 400;
+    padding-bottom: 2px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: rgba(116, 61, 167, 0.399);
+}
+
+.box {
+    margin: 0px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 410px;
+    width: 510px;
+    cursor: pointer;
+}
+
+img {
+    padding: 1px;
+}
