@@ -25,7 +25,19 @@ h3 {
     color: rgba(126, 81, 167, 0.516);
 }
 
+div {
+    text-align: center;
+    margin: 0 auto 0 auto;
+    font: 20px;
 
+}
+button {
+    color: rgba(126, 81, 167, 0.516);
+    padding: 10px;
+    background-color: rgba(152, 132, 172, 0.413);
+    border-radius: 75px;
+    border: rgba(116, 61, 167, 0.399)
+}
 
 #holder {
     border-radius: 75px;
