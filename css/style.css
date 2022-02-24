@@ -27,13 +27,17 @@ h3 {
 
 div {
     text-align: center;
-    margin: 0 auto 0 auto;
-    font: 20px;
+    margin: auto;
+    /* font: 20px; */
 
 }
 button {
+    text-align: center;
     color: rgba(126, 81, 167, 0.516);
     padding: 10px;
+    display: inline-block;
+    height: 40px;
+    width: 130px;
     background-color: rgba(152, 132, 172, 0.413);
     border-radius: 75px;
     border: rgba(116, 61, 167, 0.399)

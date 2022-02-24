@@ -7,11 +7,10 @@ const points2 = document.getElementById("points2")
 const timer = document.getElementById("count")
 const button = document.getElementById("button")
 const winner = document.getElementById("winner")
+
 let player = 'one'
 
-timer.textContent = '45'
-// points.textContent = 0;
-// points2.textContent = 0;
+timer.textContent = '30'
 
 const images = [
     { name: 'shade1', img: 'img/purple.jpg'},
@@ -45,14 +44,12 @@ const images = [
     { name: 'shade10', img: 'img/ten.png'} 
 ]
 
-//images.sort( () => 0.5 - Math.random ());
+images.sort( () => 0.5 - Math.random ());
 
 let cardChoice = []
 let cardsId = []
 let matches = []
 let pointsArr = []
-
-
 
 function switchPlayers () {
         player = player === 'one' ? 'two' : 'one';
@@ -76,13 +73,15 @@ function createBackBoard () {
 }
 
 const printPlayersScores = () => {
-
-    if(points > points2) {
-        winner.textContent = "Player One Wins"
-    } else if (points < points2) {
-        winner.textContent = "Player Two Wins"
+    // console.log(points.textContent)
+    // console.log(points2)
+    if(points.textContent > points2.textContent) {
+        console.log(points)
+        winner.textContent = "Player One Wins!"
+    } else if (points.textContent < points2.textContent) {
+        winner.textContent = "Player Two Wins!"
     } else {
-        winner.textContent = "There is a tie!"
+        winner.textContent = "There is a Tie! Play Again!"
     }
 }
 
@@ -90,12 +89,13 @@ const printPlayersScores = () => {
 button.addEventListener('click', () => {
 
 console.log('this is player', player)
-let count = 45
+let count = 30
 const setTimer1 = setInterval(()=> {
     
     if(count > 0) {
         count--; 
         timer.textContent = count;
+        winner.textContent = ''
         // console.log(count)
     }
     
@@ -104,6 +104,7 @@ const setTimer1 = setInterval(()=> {
         console.log('this is player', player)
         if (player === 'one') {
             points.textContent = pointsArr[pointsArr.length-1]
+            button.innerText = "Player Two Start!"
         }
 
        if (player === 'two') {
@@ -111,8 +112,14 @@ const setTimer1 = setInterval(()=> {
        }
         if (player === 'two') {
             printPlayersScores()
+            button.innerText = 'Player One Start!'
+            setTimeout(()=> {
+                points.textContent = '0'
+                points2.textContent = '0'
+            }, 5000)
         }
         switchPlayers()
+
         setTimeout(()=> {
         //alert(`It is Player Two's Turn!`) 
         clearInterval(setTimer1)
@@ -120,7 +127,8 @@ const setTimer1 = setInterval(()=> {
         cardChoice = []
         cardsId = []
         matches = []
-        timer.textContent = 45;
+
+        timer.textContent = 30;
         cards.forEach(element => element.style.visibility = 'visible')
         }, 100)
 
@@ -187,21 +195,3 @@ function match () {
 
 createBackBoard()
 })
-
-
-
-
-
-    //calculate the points of a match
-    //if(player one === one)
-    // point1Arr.push(currentPoints)
-    // points.textContent = point1Arr[point1Arr.length-1]
-    // console.log('points array', point1Arr[point1Arr.length-1])
-    // point2Arr.push(currentPoints)
-    // points2.textContent = point1Arr[point1Arr.length-1]
-
-
-    // let currentPoints = (matches.length) * 5
-    // point1Arr.push(currentPoints)
-    // points.textContent = point1Arr[point1Arr.length-1]
-   // points.textContent = currentPoints
