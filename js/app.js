@@ -112,11 +112,7 @@ const setTimer1 = setInterval(()=> {
            printPlayersScores()
            button.innerText = 'Player One Start!'
        }
-
-    //    setTimeout(()=> {
-    //        points.textContent = '0'
-    //        points2.textContent = '0'
-    //    }, 5000)
+ 
         switchPlayers()
 
         setTimeout(()=> {
@@ -131,12 +127,9 @@ const setTimer1 = setInterval(()=> {
         timer.textContent = 30;
         cards.forEach(element => element.style.visibility = 'visible')
         cards.forEach(element => element.setAttribute('src','img/front.jpg'))
-        // cards.forEach(element => element.removeEventListener('click',flipCards))
-        }, 100)
-
-    
+        
+        }, 100)    
     }
-   
     }, 1000)
 })
 
