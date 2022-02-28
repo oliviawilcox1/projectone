@@ -75,7 +75,7 @@ function createBackBoard () {
 const printPlayersScores = () => {
     // console.log(points.textContent)
     // console.log(points2)
-    if(points.textContent > points2.textContent) {
+    if (points.textContent > points2.textContent) {
         console.log(points)
         winner.textContent = "Player One Wins!"
     } else if (points.textContent < points2.textContent) {
@@ -109,15 +109,14 @@ const setTimer1 = setInterval(()=> {
 
        if (player === 'two') {
            points2.textContent = pointsArr[pointsArr.length-1]
+           printPlayersScores()
+           button.innerText = 'Player One Start!'
        }
-        if (player === 'two') {
-            printPlayersScores()
-            button.innerText = 'Player One Start!'
-            setTimeout(()=> {
-                points.textContent = '0'
-                points2.textContent = '0'
-            }, 5000)
-        }
+
+    //    setTimeout(()=> {
+    //        points.textContent = '0'
+    //        points2.textContent = '0'
+    //    }, 5000)
         switchPlayers()
 
         setTimeout(()=> {
@@ -127,9 +126,12 @@ const setTimer1 = setInterval(()=> {
         cardChoice = []
         cardsId = []
         matches = []
+        pointsArr = []
 
         timer.textContent = 30;
         cards.forEach(element => element.style.visibility = 'visible')
+        cards.forEach(element => element.setAttribute('src','img/front.jpg'))
+        // cards.forEach(element => element.removeEventListener('click',flipCards))
         }, 100)
 
     
@@ -153,7 +155,7 @@ function flipCards () {
         //console.log('this is the ids', cardsId)
         this.setAttribute('src', images[cardDataId].img)
     if (cardChoice.length == 2) {
-        setTimeout(match, 200)
+        setTimeout(match, 100)
         }
     }
   
