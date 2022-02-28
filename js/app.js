@@ -42,7 +42,9 @@ const images = [
 
     { name: 'shade10', img: 'img/ten.png'},
     { name: 'shade10', img: 'img/ten.png'} 
-]
+] 
+
+
 
 images.sort( () => 0.5 - Math.random ());
 
