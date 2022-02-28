@@ -142,12 +142,12 @@ function flipCards () {
    
     if(cardChoice.length != 2) {
         let cardDataId = this.getAttribute('data-id');
-        //console.log(images[cardDataId].name)
+        console.log(images[cardDataId].name)
+        //giving you shade name
         cardChoice.push(images[cardDataId].name)
-        //console.log(cardDataId)
-        //console.log('this is the cards choosen array', cardChoice)
+        console.log('this is the cards choosen array', cardChoice)
         cardsId.push(cardDataId)
-        //console.log('this is the ids', cardsId)
+        console.log('this is the ids', cardsId)
         this.setAttribute('src', images[cardDataId].img)
     if (cardChoice.length == 2) {
         setTimeout(match, 100)
@@ -159,10 +159,10 @@ function flipCards () {
 function match () {
     const cards = document.querySelectorAll('img')
     const choiceOne = cardsId[0]
-    //console.log(choiceOne)
+    console.log('this is choiceOne', choiceOne)
     const choiceTwo = cardsId[1]
     //console.log('cards array', cards)
-    // console.log(choiceTwo)
+    console.log('this is choice two', choiceTwo)
         if (cardsId[0] === cardsId[1]) {
             //account for double clicking same image
             cards[choiceOne].setAttribute('src','img/front.jpg')
